@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+    int i,sum=0;
+    printf("enter any integer(zero to stop)\n");
+    while(1)
+    {
+        printf("input a number:");
+        scanf("%d",&i);
+        if(i==0)
+        break;
+        if(i>0)
+        sum+=i;
+    }
+    printf("sum of pos integers=%d",sum);
+}
