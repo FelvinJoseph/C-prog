@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main()
+{
+    int i=2,n,sum=0;
+    printf("Enter the limit: ");
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        sum=sum+i*i*i;
+        i+=2;
+    }
+    printf("sum of cubes of even nums upto %d is %d",n,sum);
+}
