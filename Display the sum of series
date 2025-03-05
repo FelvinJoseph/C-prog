@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+    int i,n,sum=0,r=0;
+    printf("enter the limit:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        r=r*10+9;
+        printf("%d\t",r);
+        sum+=r;
+    }
+    printf("sum= %d",sum);
+}
