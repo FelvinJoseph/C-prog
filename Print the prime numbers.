@@ -1,0 +1,22 @@
+#include<stdio.h>
+int prime(int num)
+{
+    int flag=0,i;
+    for(i=2;i<num;i++)
+    {
+        if(num%i==0)
+        flag=1;
+    }
+    return flag;
+}
+void main()
+{
+    int n,i,flag;
+    printf("enter the range:");
+    scanf("%d",&n);
+    for(i=2;i<=n;i++)
+    {
+        if(prime(i)==0)
+        printf("%d\t",i);
+    }
+}
