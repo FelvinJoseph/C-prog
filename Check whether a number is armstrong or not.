@@ -1,0 +1,31 @@
+#include<stdio.h>
+int power(int num,int r)
+{
+    int i,p=1;
+    for(i=1;i<=r;i++)
+    {
+        p=p*num;
+    }
+    return p;
+}
+void main()
+{
+    int num,orgnum,i=0,rem,sum=0;
+    printf("eter the num:");
+    scanf("%d",&num);
+    orgnum=num;
+    while(num>0)
+    {
+       num/=10;
+       i++;
+    }
+    for(num=orgnum;num>0;num/=10)
+    {
+        rem=num%10;
+        sum+=power(rem,i);
+    }
+    if(orgnum==sum)
+    printf("armstrong\n");
+    else
+    printf("not armstrong\n");
+}
