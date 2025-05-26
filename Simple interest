@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    float principal=1000,rate=5,time=2;
+    float interest;
+    interest=principal*rate*time/100;
+    printf("Interest : %f",interest);
+    return 0;
+}
