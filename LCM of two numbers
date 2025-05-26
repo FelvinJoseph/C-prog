@@ -1,0 +1,16 @@
+#include<stdio.h>
+// Function to find the greatest common divisor (GCD) using the Euclidean algorithm
+int gcd(int a,int b)
+{
+    if(b==0)
+        return a;
+    else
+        gcd(b,a%b);
+}
+int main()
+{
+    int a=12,b=8;
+    int lcm=(a*b)/gcd(a,b);//equatiom for finding lcm
+    printf("LCM is : %d",lcm);
+    return 0;
+}
