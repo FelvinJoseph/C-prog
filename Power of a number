@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int base=2,exp=5;
+    int result;
+    for(result=1;exp>0;exp--)
+    {
+        result*=base;
+    }
+    printf("Result : %d",result);
+    return 0;
+}
