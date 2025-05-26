@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a=8,b=12;
+    while(a!=b)
+    {
+        if(a>b)
+            a-=b;
+        else
+            b-=a;
+    }
+    printf("Gcd is : %d",a);
+    return 0;
+}
