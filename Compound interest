@@ -1,0 +1,17 @@
+#include<stdio.h>
+float  power(float base,int exp)
+{
+   float res=1;
+   for(int i=0;i<exp;i++)
+   {
+      res*=base;
+   }
+   return res;
+}
+int main()
+{
+   float principal=1000,rate=5,time=2;
+   float result=principal * power(1+rate/100, time);
+   printf("Compound interest  is : %0.2f\n",result);
+   return 0;
+}
