@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+   char str[50];
+   int count=0;
+   printf("Enter the string: ");
+   //to read string including whitespaces, we need to include %[^\n] instead of %s
+   scanf("%[^\n]",str);
+   for(int i=0;str[i]!='\0';i++)
+   {
+      if(str[i]=='a'||str[i]=='A'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='o'||str[i]=='O'||str[i]=='u'||str[i]=='U')
+         count++;
+   }
+   printf("No of vowels in the string is : %d\n",count);
+   return 0;
+}
