@@ -1,0 +1,32 @@
+#include<stdio.h>
+int secondLarge(int arr[],int n)
+{
+    int large=arr[0];
+    int second=arr[0];
+    for(int i=1;i<n;i++)
+    {
+        if(arr[i]>large)
+        {
+            second=large;
+            large=arr[i];
+        }
+        else if(arr[i]>second)
+        {
+            second=arr[i];
+        }
+    }
+    return second;
+}
+int main()
+{
+    int arr[20],n;
+    printf("Enter the size of array: ");
+    scanf("%d",&n);
+    printf("Enter the array:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Second largest element is : %d\n",secondLarge(arr,n));
+    return 0;
+}
