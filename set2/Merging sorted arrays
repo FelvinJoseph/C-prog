@@ -1,0 +1,50 @@
+#include<stdio.h>
+void insert(int a[],int m)
+{
+    for(int i=0;i<m;i++)
+    scanf("%d",&a[i]);
+}
+void mergeArray(int a[],int b[],int m,int n,int result[])
+{
+    int i=0,j=0,k=0;
+    while(i<m && j<n)
+    {
+        if(a[i]<=b[j])
+        {
+            result[k++]=a[i];
+            i++;
+        }
+        else
+        {
+            result[k++]=b[j];
+            j++;
+        }
+    }
+    while(i<m)
+    {
+        result[k++]=a[i++];
+    }
+    while(j<n)
+    {
+        result[k++]=b[j++];
+    }
+}
+int main()
+{
+    int m,n;
+    printf("Enter the size of array1 and array2: ");
+    scanf("%d %d",&m,&n);
+    int a[m],b[n],result[m+n];
+    printf("Enter array1: ");
+    insert(a,m);
+    printf("Enter array2: ");
+    insert(b,n);
+    mergeArray(a,b,m,n,result);
+    printf("The merged array is: \n");
+    for(int i=0;i<(m+n);i++)
+    {
+        printf("%d\t",result[i]);
+    }
+    printf("\n");
+    return 0;
+}
