@@ -1,0 +1,25 @@
+#include<stdio.h>
+float averageCalc(int a[],int n)
+{
+    int sum;
+    for(int i=0;i<n;i++)
+    {
+        sum+=a[i];
+    }
+    float average=(float)sum/n;
+    return average;
+}
+int main()
+{
+    int n;
+    printf("Enter the size: ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter the array: ");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Average is: %f\n",averageCalc(a,n));
+    return 0;
+}
