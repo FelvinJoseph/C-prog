@@ -1,0 +1,31 @@
+#include<stdio.h>
+void transpose(int rows,int cols,int a[rows][cols],int b[cols][rows])
+{
+    for(int i=0;i<cols;i++)
+        for(int j=0;j<rows;j++)
+            b[i][j]=a[j][i];
+    
+}
+int main()
+{
+    int rows,cols;
+    printf("Enter the size of matrix: ");
+    scanf("%d%d",&rows,&cols);
+    int a[rows][cols],b[cols][rows];
+    printf("Enter the matrix:\n");
+    for(int i=0;i<rows;i++)
+        for(int j=0;j<cols;j++)
+            scanf("%d",&a[i][j]);
+    
+    transpose(rows,cols,a,b);
+    printf("Transpose is:\n");
+    for(int i=0;i<cols;i++)
+    {
+        for(int j=0;j<rows;j++)
+        {
+            printf("%d ",b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
