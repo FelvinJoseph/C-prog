@@ -1,0 +1,19 @@
+#include <stdio.h>
+int countDigits(int num)
+{
+  int digits=0;
+  while(num>0)
+  {
+      digits++;
+      num/=10;
+  }
+  return digits;
+}
+
+int main() {
+  int num;
+  printf("Enter the number: ");
+  scanf("%d",&num);
+  printf("Number of digits: %d\n", countDigits(num));
+  return 0;
+}
