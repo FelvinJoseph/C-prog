@@ -1,0 +1,33 @@
+#include <stdio.h>
+void maxInRows(int rows,int cols,int mat[rows][cols])
+{
+  for(int i=0;i<rows;i++)
+  {
+      int large=mat[i][0];
+      for(int j=0;j<cols;j++)
+      {
+          if(mat[i][j]>large)
+          {
+              large=mat[i][j];
+          }
+      }
+      printf("Max element in row %d: %d\n",i+1,large);
+  }
+}
+
+int main() {
+  int rows,cols;
+  printf("Enter the no of rows and cols: ");
+  scanf("%d %d",&rows,&cols);
+  int mat[rows][cols];
+  printf("Enter the matrix:\n");
+  for(int i=0;i<rows;i++)
+  {
+      for(int j=0;j<cols;j++)
+      {
+          scanf("%d",&mat[i][j]);
+      }
+  }
+  maxInRows(rows,cols,mat);
+  return 0;
+}
