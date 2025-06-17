@@ -1,0 +1,17 @@
+#include<stdio.h>
+int factorial(int num) {
+  int fact = 1;
+  for (int i = 1; i <= num; i++) {
+    fact *= i;
+  }
+  return fact;
+}
+
+int main() {
+  int arr[] = {4, 3, 2, 5};
+  for (int i = 0; i < 4; i++) {
+    printf("%d ", factorial(arr[i]));
+  }
+  printf("\n");
+  return 0;
+}
